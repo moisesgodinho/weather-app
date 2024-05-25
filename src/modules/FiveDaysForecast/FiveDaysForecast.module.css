@@ -1,0 +1,23 @@
+.forecast {
+  grid-area: forecast;
+  border-radius: 25px;
+  padding: 2vw;
+  background-color: #1c1c27;
+}
+.tittle {
+  margin-bottom: 1vh;
+}
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.imgLi {
+  width: 3vw;
+}
+.tempMinMax {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
