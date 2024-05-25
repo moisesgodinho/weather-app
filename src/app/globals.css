@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  color: #fff;
+}
+/* Barra de rolagem geral */
+::-webkit-scrollbar {
+  width: 0.7vw; /* largura da barra vertical */
+  height: 1vh; /* altura da barra horizontal */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background: #15141c;
+}
+
+/* Polegar/indicador da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background: #1c1c27;
+  border-radius: 10px; /* arredondamento dos cantos */
+}
+
+/* Ao passar o mouse sobre a barra de rolagem */
+::-webkit-scrollbar-thumb:hover {
+  background: #1c1c27;
+}
