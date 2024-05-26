@@ -10,14 +10,24 @@
 .listItem {
   display: flex;
   align-items: center;
+  margin-bottom: 1vh;
   justify-content: space-between;
 }
 .imgLi {
   width: 3vw;
 }
 .tempMinMax {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.weekday {
+  text-align: right;
+}
+.dateString {
+  text-align: left;
+}
+.tempMinMax img {
+  margin-right: 0.5vw;
 }

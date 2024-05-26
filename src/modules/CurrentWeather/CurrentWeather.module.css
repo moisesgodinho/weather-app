@@ -14,14 +14,14 @@
   gap: 5px;
 }
 .temperatura {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 .graus {
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 0vw 1vw 0vw 0vw;
 }
 .imgPrevisao {
-  height: 12vh;
+  height: 16vh;
   background-color: transparent;
 }
 .textoPrevisao {

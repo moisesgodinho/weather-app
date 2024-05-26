@@ -1,3 +1,6 @@
+"use client";
+
+import { getUserCoordinates } from "@/api/api";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -11,7 +14,7 @@ function Header() {
           id="inputCity"
           placeholder="Procurar cidade"
         />
-        <button className={styles.botaoBusca} id="searchBtn">
+        <button className={styles.botaoBusca}>
           <img
             className={styles.imgBusca}
             src="https://www.svgrepo.com/show/488200/find.svg"
@@ -20,7 +23,10 @@ function Header() {
         </button>
       </div>
 
-      <button className={styles.currentLocalization} id="currentLocalization">
+      <button
+        className={styles.currentLocalization}
+        onClick={getUserCoordinates}
+      >
         <img
           className={styles.localizationCurrent}
           src="https://img.icons8.com/ios-filled/50/center-direction.png"

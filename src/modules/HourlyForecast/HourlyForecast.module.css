@@ -24,8 +24,16 @@
   margin-bottom: 1rem;
 }
 .imgLi {
-  width: 3vw;
+  width: 5vw;
 }
 .textoLi {
   margin-top: 1rem;
+}
+.ulHourly {
+  display: flex;
+  gap: 0.5rem;
+}
+.listItem {
+  display: flex;
+  flex-direction: row;
 }
