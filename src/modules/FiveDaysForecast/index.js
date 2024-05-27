@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { fetchData, getUserCoordinates, url } from "../../api/api";
+import { fetchData, url } from "../../api/api";
 import styles from "./FiveDaysForecast.module.css";
+import { getUserCoordinates } from "@/components/GetUserCoordinates";
 
 const { forecast, tittle, listItem, imgLi, tempMinMax, weekday, dateString } =
   styles;

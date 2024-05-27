@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import styles from "./CurrentWeather.module.css";
-import { fetchData, url, getUserCoordinates } from "@/api/api";
+import { fetchData, url } from "@/api/api";
+import { getUserCoordinates } from "@/components/GetUserCoordinates";
 
 const {
   currentWeather,

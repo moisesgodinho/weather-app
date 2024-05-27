@@ -3,7 +3,9 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment-timezone";
 import styles from "./HourlyForecast.module.css";
-import { getUserCoordinates, fetchData, url } from "../../api/api";
+import { fetchData, url } from "../../api/api";
+import { getUserCoordinates } from "@/components/GetUserCoordinates";
+import { formatDateTime } from "@/components/FormatDateTime";
 
 const {
   hourlyForecast,
@@ -41,21 +43,16 @@ const HourlyForecast = () => {
       });
   }, []);
 
-  const formatDateTime = (unixTimestamp) => {
-    if (!timeZone) return { formattedTime: "", formattedDate: "" };
-    const date = moment.unix(unixTimestamp).tz(timeZone);
-    const formattedTime = date.format("HH:mm");
-    const formattedDate = date.format("DD/MM");
-    return { formattedTime, formattedDate };
-  };
-
   return (
     <section className={hourlyForecast} id="hourlyForecast">
       <p className={tittle}>Próximas Horas</p>
       {error && <p>{error}</p>}
       <ul className={ulHourly}>
         {hourlyForecastData.slice(0, 8).map((item, index) => {
-          const { formattedTime, formattedDate } = formatDateTime(item.dt);
+          const { formattedTime, formattedDate } = formatDateTime(
+            item.dt,
+            timeZone,
+          );
           return (
             <li key={index} className={listItem}>
               <div className={hourly}>
